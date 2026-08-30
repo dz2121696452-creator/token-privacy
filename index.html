@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="《TOKEN》隐私政策">
+  <title>《TOKEN》隐私政策</title>
+  <style>
+    :root {
+      --page: #f5f3ee;
+      --paper: #fffdfa;
+      --text: #272721;
+      --muted: #6d6b63;
+      --line: #e5e0d5;
+      --accent: #356553;
+      --accent-soft: #e8f0eb;
+      --shadow: 0 18px 50px rgba(49, 45, 35, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.85;
+      letter-spacing: 0.01em;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    .page {
+      width: min(100% - 32px, 820px);
+      margin: 40px auto;
+      padding: clamp(28px, 6vw, 68px);
+      background: var(--paper);
+      border: 1px solid rgba(229, 224, 213, 0.9);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    header {
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1.25;
+      letter-spacing: 0.02em;
+    }
+
+    .dates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .summary {
+      margin: 28px 0 34px;
+      padding: 18px 20px;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 4px 12px 12px 4px;
+    }
+
+    .summary strong { color: #244a3d; }
+
+    section { margin-top: 38px; }
+
+    h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0 0 14px;
+      font-size: 21px;
+      line-height: 1.45;
+      letter-spacing: 0.01em;
+    }
+
+    h2 .number {
+      flex: 0 0 auto;
+      color: var(--accent);
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    p { margin: 0 0 12px; }
+
+    ul {
+      margin: 8px 0 14px;
+      padding-left: 1.35em;
+    }
+
+    li { margin: 7px 0; }
+    li::marker { color: var(--accent); }
+
+    .status-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .status-list li {
+      margin: 0;
+      padding: 12px 14px;
+      background: #faf8f3;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      line-height: 1.55;
+    }
+
+    .status-list li::before {
+      content: "—";
+      margin-right: 8px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .contact-card {
+      margin-top: 16px;
+      padding: 20px;
+      background: #faf8f3;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .contact-card dl {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr);
+      gap: 9px 14px;
+      margin: 0;
+    }
+
+    .contact-card dt { color: var(--muted); }
+    .contact-card dd { margin: 0; }
+
+    footer {
+      margin-top: 46px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        min-height: 100vh;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding-top: calc(32px + env(safe-area-inset-top));
+        padding-right: max(22px, env(safe-area-inset-right));
+        padding-bottom: calc(40px + env(safe-area-inset-bottom));
+        padding-left: max(22px, env(safe-area-inset-left));
+      }
+
+      .status-list { grid-template-columns: 1fr; }
+      section { margin-top: 32px; }
+      .contact-card dl { grid-template-columns: 1fr; gap: 2px; }
+      .contact-card dd + dt { margin-top: 8px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      a { color: inherit; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>《TOKEN》隐私政策</h1>
+      <div class="dates" aria-label="政策日期">
+        <span>更新日期：2026年8月31日</span>
+        <span>生效日期：2026年8月31日</span>
+      </div>
+    </header>
+
+    <div class="summary">
+      <strong>本版本要点：</strong>《TOKEN》当前版本无需注册账号，不进行实名认证，不提供支付功能，未接入真实广告 SDK，也未正式接入 TapTap 登录或排行榜 SDK。游戏进度与设置主要保存在您的设备本地；震动仅用于提供游戏反馈，不用于收集个人信息。
+    </div>
+
+    <p>欢迎您使用《TOKEN》（以下简称“本游戏”）。本游戏由一昂工作室运营。我们重视您的隐私和个人信息安全，并遵循合法、正当、必要和诚信原则处理与本游戏有关的信息。</p>
+    <p>请您在使用本游戏前阅读并了解本政策。本政策用于说明当前公开版本的实际信息处理情况；如后续版本的功能或信息处理方式发生变化，我们将及时更新本政策。</p>
+
+    <section aria-labelledby="scope">
+      <h2 id="scope"><span class="number">01</span>适用范围</h2>
+      <p>本政策适用于一昂工作室运营的《TOKEN》移动端游戏。第三方平台自身提供的下载、安装、更新等服务，由相应平台按照其规则处理；本政策仅说明本游戏自身的处理行为。</p>
+    </section>
+
+    <section aria-labelledby="collection">
+      <h2 id="collection"><span class="number">02</span>我们如何处理信息</h2>
+
+      <h3>2.1 当前版本不收集的个人信息</h3>
+      <p>本游戏当前版本不设置自有账号体系，不要求您提供手机号、密码、姓名、身份证件信息或其他实名认证信息，也不以运营者服务器为您建立个人账户档案。</p>
+
+      <h3>2.2 本地游戏数据</h3>
+      <p>为保存您的游戏进度和使用偏好，本游戏会在您的设备本地生成并保存必要的游戏数据，例如电力、金钱、算力、Token 等游戏内资源数据，建筑、工具及科技的购买与解锁状态，开创、颠覆及成就记录，自动化设置，音乐、音效、震动等设置项，教程状态以及计算离线收益所需的本地时间记录。</p>
+      <p>上述数据主要保存在您的设备本地，用于恢复游戏进度和实现游戏功能。当前版本不会由一昂工作室通过自有服务器主动上传上述游戏存档。</p>
+      <p>您可以通过游戏提供的清档功能（如有）、Android 系统的“清除应用数据”功能或卸载本游戏删除相关本地数据。删除后，游戏进度可能无法恢复。</p>
+
+      <h3>2.3 震动反馈</h3>
+      <p>本游戏会在特定游戏操作或事件发生时使用设备的震动功能，以提供触觉反馈。调用震动功能不会读取、收集或上传您的个人信息。您可以在《TOKEN》的“设置”页面关闭震动反馈；部分设备也可能提供相应的系统级控制选项。</p>
+
+      <h3>2.4 联系我们时产生的信息</h3>
+      <p>如果您主动通过电子邮箱、电话等方式联系我们，我们可能会处理您主动提供的电子邮箱地址、电话号码、问题描述、截图以及您选择提供的其他信息。</p>
+      <p>我们仅将上述信息用于处理您的咨询、意见、投诉、故障反馈或其他请求，并在实现相关处理目的所必要的最短期限内保存；法律法规另有规定的除外。</p>
+      <p>请您不要在反馈过程中主动提交身份证号码、银行卡号、账号密码等与解决问题无关的敏感个人信息。</p>
+    </section>
+
+    <section aria-labelledby="permissions">
+      <h2 id="permissions"><span class="number">03</span>设备权限说明</h2>
+      <p>当前版本核心游戏功能不需要访问您的麦克风、摄像头、通讯录、短信、通话记录、精确地理位置或照片内容。游戏会使用设备震动功能提供触觉反馈。若后续版本新增需要调用其他设备权限的功能，我们将在实际使用前说明目的，并依法履行相应程序。</p>
+    </section>
+
+    <section aria-labelledby="features">
+      <h2 id="features"><span class="number">04</span>账号、支付、广告与第三方 SDK</h2>
+      <p>根据当前版本的实际功能状态，本游戏：</p>
+      <ul class="status-list">
+        <li>无自有账号注册或登录</li>
+        <li>无实名认证</li>
+        <li>无支付或充值功能</li>
+        <li>无真实广告 SDK</li>
+        <li>无正式 TapTap 登录 SDK</li>
+        <li>无正式 TapTap 排行榜 SDK</li>
+      </ul>
+      <p>因此，本游戏不会通过上述尚未接入的功能或 SDK 收集、使用或向第三方提供您的个人信息。如果未来版本正式加入登录、排行榜、广告、支付、云存档、统计分析或其他第三方 SDK，我们会在相关版本发布前更新本政策，明确说明处理目的、方式、信息种类及第三方情况，并依法履行必要的告知与同意义务。</p>
+    </section>
+
+    <section aria-labelledby="sharing">
+      <h2 id="sharing"><span class="number">05</span>信息的共享、转让与公开披露</h2>
+      <p>当前版本游戏本体不会为了广告投放、用户画像、营销等目的向第三方共享您的个人信息，也不会出售您的个人信息。</p>
+      <p>如果您主动通过电子邮箱、电话等方式联系我们，相关通信服务本身可能由电子邮箱服务商、电信运营商等按照其自身规则提供。</p>
+      <p>此外，在取得您的明确同意，或者根据法律法规、有权机关依法提出的要求等法律允许的情况下，我们可能在必要范围内提供相关信息。</p>
+      <p>如未来新增第三方 SDK 或其他导致个人信息共享的功能，我们将在上线前更新本政策，并依法履行相应告知和同意程序。</p>
+    </section>
+
+    <section aria-labelledby="storage">
+      <h2 id="storage"><span class="number">06</span>信息存储与安全</h2>
+      <p>游戏进度和基础设置主要保存在您的设备本地，保存期限通常与本游戏在设备上的存续期间一致。清除应用数据、卸载游戏、恢复出厂设置或更换设备，均可能导致本地数据被删除或无法恢复。</p>
+      <p>我们会在当前业务范围内采取合理措施保护本游戏及相关数据安全。请您同时妥善保管设备，并及时安装可信的系统安全更新。</p>
+    </section>
+
+    <section aria-labelledby="rights">
+      <h2 id="rights"><span class="number">07</span>您的权利</h2>
+      <p>当前版本没有自有账号及运营者服务器个人资料，因此不提供账号资料查询、更正或注销入口。对于保存在设备本地的游戏数据，您可以通过清除应用数据或卸载本游戏进行删除。</p>
+      <p>如果您对本游戏的信息处理情况有疑问，或希望依法行使与个人信息有关的权利，可以通过本政策末尾的联系方式与我们联系。我们会在核实情况后依法处理。</p>
+    </section>
+
+    <section aria-labelledby="minors">
+      <h2 id="minors"><span class="number">08</span>未成年人保护</h2>
+      <p>我们重视未成年人的个人信息保护。未成年人应在父母或其他监护人的指导下阅读本政策并使用本游戏；不满十四周岁的未成年人应在监护人同意和指导下使用本游戏。</p>
+      <p>当前版本不要求用户提交年龄、身份或实名认证信息，也不主动收集未成年人的个人信息。如果您认为未成年人的个人信息被不当处理，请通过本政策末尾的联系方式联系我们。</p>
+    </section>
+
+    <section aria-labelledby="updates">
+      <h2 id="updates"><span class="number">09</span>本政策的更新</h2>
+      <p>我们可能根据游戏功能、信息处理方式或法律法规的变化修订本政策。涉及处理目的、方式、信息种类、第三方 SDK 等重要内容变化时，我们会在新版本发布前更新政策，并通过适当方式提示您阅读。</p>
+      <p>未经依法告知并在必要时取得您的同意，我们不会通过政策更新擅自扩大个人信息处理范围。</p>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact"><span class="number">10</span>联系我们</h2>
+      <p>如您对本政策或《TOKEN》的隐私保护有任何问题、意见或建议，可以通过以下方式联系我们：</p>
+      <div class="contact-card">
+        <dl>
+          <dt>运营者</dt>
+          <dd>一昂工作室</dd>
+          <dt>负责人</dt>
+          <dd>刘紫阳</dd>
+          <dt>联系地址</dt>
+          <dd>北京市昌平区南口镇南涧路29号北京化工大学昌平校区</dd>
+          <dt>联系电话</dt>
+          <dd><a href="tel:15509377570">15509377570</a></dd>
+          <dt>电子邮箱</dt>
+          <dd><a href="mailto:liuziyangchina@163.com">liuziyangchina@163.com</a></dd>
+        </dl>
+      </div>
+    </section>
+
+    <footer>一昂工作室 · 《TOKEN》隐私政策</footer>
+  </main>
+</body>
+</html>
